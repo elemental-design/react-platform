@@ -1,0 +1,20 @@
+{
+  "name": "@react-platform/native",
+  "version": "0.0.1-beta.1",
+  "description": "Common React Native APIs and components for web and React Native platforms such as `react-native`, `react-native-windows`, `react-native-macos`, `react-sketchapp`, `react-figma`, etc.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elemental-design/react-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elemental-design/react-platform/issues"
+  },
+  "homepage": "https://github.com/elemental-design/react-platform#readme",
+  "keywords": [],
+  "author": "Macintosh Helper <github@macintoshhelper.com>",
+  "license": "MIT"
+}
