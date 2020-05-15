@@ -1,6 +1,6 @@
 {
-  "name": "@react-platform/datetimepicker",
-  "version": "2.4.0",
+  "name": "@react-platform/async-storage",
+  "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@react-platform/datetimepicker": "^1.10.1"
+    "@react-platform/async-storage": "^1.10.1"
   },
   "peerDependencies": {
-    "@react-platform/datetimepicker": ">=1"
+    "@react-platform/async-storage": ">=1"
   }
 }
