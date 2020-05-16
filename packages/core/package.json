@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/elemental-design/react-platform/issues"
   },
-  "homepage": "https://github.com/elemental-design/react-platform#readme",
-  "dependencies": {
-    "react-primitives": "^0.8.1"
-  }
+  "homepage": "https://github.com/elemental-design/react-platform#readme"
 }

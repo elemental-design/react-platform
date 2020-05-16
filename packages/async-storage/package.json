@@ -10,9 +10,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@react-platform/async-storage": "^1.10.1"
+    "@react-native-community/async-storage": "^1.10.1"
   },
   "peerDependencies": {
-    "@react-platform/async-storage": ">=1"
+    "@react-native-community/async-storage": ">=1"
   }
 }

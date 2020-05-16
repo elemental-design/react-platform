@@ -10,9 +10,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@react-platform/datetimepicker": "^1.10.1"
+    "@react-native-community/datetimepicker": "^1.10.1"
   },
   "peerDependencies": {
-    "@react-platform/datetimepicker": ">=1"
+    "@react-native-community/datetimepicker": ">=1"
   }
 }
