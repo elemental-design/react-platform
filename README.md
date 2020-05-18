@@ -60,6 +60,39 @@ export default function HomeScreen() {
 }
 ```
 
+## Terminology
+
+### Bridge
+
+Messaging tunnel between native code and JavaScript/React runtime.
+
+### Layout
+
+Yoga layout (native Flexbox port).
+
+### Threads
+
+Communication between threads is asynchronous.
+
+#### UI Thread (Platform UI)
+
+Bridge to layout thread with `view.appendChild(RCTView)`
+
+#### Layout Thread (Shadow Tree)
+
+React reconciliation tree.
+
+Bridge to JavaScript thread with `[..., createView(id, RCTView, ...)]`
+
+#### JavaScript Thread (React Runtime)
+
+## Reading
+
+**Talks**
+
+- [React as a Platform: A path towards a truly cross-platform UI - Leland Richardson](https://www.youtube.com/watch?v=hNwQPJy-XZY)
+- [React Native's New Architecture - Parashuram N](https://www.youtube.com/watch?v=UcqRXTriUVI)
+
 
 ## Contributing
 
