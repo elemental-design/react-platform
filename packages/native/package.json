@@ -1,9 +1,12 @@
 {
   "name": "@react-platform/native",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.2-beta.4",
   "description": "Common React Native APIs and components for web and React Native platforms such as `react-native`, `react-native-windows`, `react-native-macos`, `react-sketchapp`, `react-figma`, etc.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json # Not working or used currently",
+    "build": "npm run build:main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +19,13 @@
   "homepage": "https://github.com/elemental-design/react-platform#readme",
   "keywords": [],
   "author": "Macintosh Helper <github@macintoshhelper.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@react-platform/core": "0.0.2-beta.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.43",
+    "react": "^16.13.1",
+    "typescript": "^3.9.7"
+  }
 }
