@@ -2,7 +2,7 @@
   "name": "@react-platform/core",
   "version": "0.0.1",
   "description": "Reserved for future use.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elemental-design/react-platform/issues"
   },
-  "homepage": "https://github.com/elemental-design/react-platform#readme"
+  "homepage": "https://github.com/elemental-design/react-platform#readme",
+  "peerDependencies": {
+    "react-primitives": ">= 0.8.1"
+  }
 }
