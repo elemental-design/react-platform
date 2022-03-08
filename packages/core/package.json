@@ -1,9 +1,21 @@
 {
   "name": "@react-platform/core",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.5",
   "description": "Reserved for future use.",
   "main": "lib/index.js",
+  "sketch": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "clean": "rm -rf lib/",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "build:main:types": "tsc -d -p tsconfig.json",
+    "build:module:types": "tsc -d -p tsconfig.module.json",
+    "build:js": "npm run build:main",
+    "build:types": "npm run build:main:types && npm run build:module:types",
+    "build": "npm run clean && npm run build:js && npm run build:main:types",
+    "dev": "tsc --watch -p tsconfig.json & tsc --watch -d -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,5 +31,9 @@
   "homepage": "https://github.com/elemental-design/react-platform#readme",
   "peerDependencies": {
     "react-primitives": ">= 0.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.39",
+    "typescript": "^4.6.2"
   }
 }
