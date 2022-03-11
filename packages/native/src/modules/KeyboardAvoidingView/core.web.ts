@@ -1,2 +1,2 @@
 // @ts-ignore
-export { KeyboardAvoidingView } from 'react-native-web';
+export { KeyboardAvoidingView as default } from 'react-native-web';

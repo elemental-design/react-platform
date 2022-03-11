@@ -1,2 +1,2 @@
 // @ts-ignore
-export { SafeAreaView } from 'react-native-web';
+export { SafeAreaView as default } from 'react-native-web';

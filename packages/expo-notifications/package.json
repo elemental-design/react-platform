@@ -1,5 +1,5 @@
 {
-  "name": "@react-platform/svg",
+  "name": "@react-platform/expo-notifications",
   "version": "1.0.0",
   "description": "Cross-platform React SVG primitives",
   "main": "index.js",

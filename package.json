@@ -1,0 +1,33 @@
+{
+  "name": "@react-platform/root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cross-platform React interoperability APIs, component wrappers and polyfills for all React (Native) platforms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elemental-design/react-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elemental-design/react-platform/issues"
+  },
+  "homepage": "https://github.com/elemental-design/react-platform#readme",
+  "dependencies": {
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@types/node": "^16.7.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
