@@ -16,7 +16,8 @@ try {
   // @ts-ignore
   ReactPrimitives = require('react-primitives');
 } catch (err) {
-  // FIXME: Experimental stub if react-primitives isn't installed.
+  // FIXME: Clean-up experimental stub if react-primitives isn't installed.
+  // @ts-ignore
   ReactPrimitives = require('./Core');
 }
 

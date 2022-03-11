@@ -12,5 +12,5 @@ if (typeof window !== 'undefined') {
   useWindowDimensions = () => ({ width: DEFAULTS.width, height: DEFAULTS.height });
 };
 
-module.exports = useWindowDimensions;
+export default useWindowDimensions as any;
 

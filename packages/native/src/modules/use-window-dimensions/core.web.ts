@@ -22,7 +22,7 @@ export default function useWindowSize() {
 
   const [windowSize, setWindowSize] = useState(getSize);
 
-  useEffect(() => {
+  useEffect((): any => {
     if (!isClient) {
       return false;
     }

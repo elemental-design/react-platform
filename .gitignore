@@ -103,6 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
+# Additions
+
 .DS_Store
 
 packages/*/lib

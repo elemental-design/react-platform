@@ -1,3 +1,5 @@
+import * as Platform from './modules/Platform';
+
 interface API {
   StyleSheet: any,
   View: any,
@@ -33,7 +35,7 @@ const Core: {
   Dimensions: null,
   // PixelRatio: require('./modules/PixelRatio'),
   PixelRatio: null,
-  Platform: require('./modules/Platform'),
+  Platform,
   inject: (api: API) => {
     if (api.StyleSheet) {
       Core.StyleSheet = api.StyleSheet;
@@ -65,4 +67,4 @@ const Core: {
   },
 };
 
-module.exports = Core;
+export = Core;
