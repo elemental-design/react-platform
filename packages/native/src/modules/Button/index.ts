@@ -1,8 +1,10 @@
 // @ts-ignore
 import { Platform } from '@react-platform/core';
 
-module.exports = Platform.select({
+const Button = Platform.select({ // @ts-ignore
   native: () => require('react-native').Button,
   web: () => require('react-native-web').Button,
   default: () => require('./core'),
 })();
+
+export default Button;

@@ -1,3 +1,5 @@
+// @ts-nocheck FIXME: Add types
+
 /*
  * This file contains source-code copied from https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js
  * React Native's source code is licensed under the MIT license: https://github.com/facebook/react-native/blob/master/LICENSE

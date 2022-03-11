@@ -1,8 +1,10 @@
 // @ts-ignore
 import { Platform } from '@react-platform/core';
 
-module.exports = Platform.select({
+const ActivityIndicator = Platform.select({ // @ts-ignore
   native: () => require('react-native').ActivityIndicator,
   web: () => require('react-native-web').ActivityIndicator,
   default: () => require('./core'),
 })();
+
+export default ActivityIndicator;

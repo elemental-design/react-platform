@@ -11,15 +11,19 @@ interface CoreType extends Modules {
 import KeyboardAvoidingView from './modules/KeyboardAvoidingView';
 import ScrollView from './modules/ScrollView';
 import SafeAreaView from './modules/SafeAreaView';
+import AccessibilityInfo from './modules/AccessibilityInfo';
+import Button from './modules/Button';
+import FlatList from './modules/FlatList';
+import ActivityIndicator from './modules/ActivityIndicator';
 
 const Core: CoreType = {
   // React Native API – https://github.com/facebook/react-native/blob/6de3fffc37af9b301b669ba183a7910bcc432b6e/index.js
-  AccessibilityInfo: require('./modules/AccessibilityInfo'),
-  ActivityIndicator: require('./modules/ActivityIndicator'),
-  Button: require('./modules/Button'),
+  AccessibilityInfo,
+  ActivityIndicator,
+  Button,
   DatePickerIOS: null,
   DrawerLayoutAndroid: null,
-  FlatList: require('./modules/FlatList'),
+  FlatList,
   Image: null,
   ImageBackground: null,
   InputAccessoryView: null,

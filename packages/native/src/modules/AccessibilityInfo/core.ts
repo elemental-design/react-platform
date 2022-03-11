@@ -1,12 +1,10 @@
-module.exports = {
-  isBoldTextEnabled: () => {},
-  isGrayscaleEnabled: () => {},
-  isInvertColorsEnabled: () => {},
-  isReduceMotionEnabled: () => {},
-  isReduceTransparencyEnabled: () => {},
-  isScreenReaderEnabled: () => {},
-  addEventListener: () => {},
-  setAccessibilityFocus: () => {},
-  announceForAccessibility: () => {},
-  removeEventListener: () => {},
-};
+export const isBoldTextEnabled = () => {};
+export const isGrayscaleEnabled = () => {};
+export const isInvertColorsEnabled = () => {};
+export const isReduceMotionEnabled = () => {};
+export const isReduceTransparencyEnabled = () => {};
+export const isScreenReaderEnabled = () => {};
+export const addEventListener = () => {};
+export const setAccessibilityFocus = () => {};
+export const announceForAccessibility = () => {};
+export const removeEventListener = () => {};
