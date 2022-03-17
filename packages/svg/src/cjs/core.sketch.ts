@@ -1,6 +1,8 @@
 /* eslint-disable import/no-named-as-default */
 
-import Svg, {
+import { Svg } from 'react-sketchapp';
+
+const {
   Circle,
   ClipPath,
   Defs,
@@ -21,9 +23,9 @@ import Svg, {
   TextPath,
   TSpan,
   Use,
-} from 'react-native-svg';
+} = Svg;
 
-module.exports = {
+export {
   Svg,
   Circle,
   ClipPath,
@@ -46,3 +48,5 @@ module.exports = {
   TSpan,
   Use,
 };
+
+export default Svg;

@@ -23,9 +23,9 @@ const {
   TextPath,
   TSpan,
   Use,
-} = Svg
+} = Svg;
 
-module.exports = {
+export {
   Svg,
   Circle,
   ClipPath,
@@ -48,3 +48,5 @@ module.exports = {
   TSpan,
   Use,
 };
+
+export default Svg;
