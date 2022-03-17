@@ -1,13 +1,9 @@
 // Stubs to prevent crashes
-const reactPrimitives = require('react-primitives');
-const { StyleSheet } = reactPrimitives;
+// @ts-ignore
+import { StyleSheet, View } from '@react-platform/core';
+import { ReactNode } from 'react';
 
-// TODO: Render some warning text that svgs do not work on this platform, or a placeholder coloured rectangle or something
-const Svg = ({ children, width = 64, height = 64 }) => (
-  <View style={StyleSheet.create({ width, height })}>
-    {children}
-  </View>
-);
+
 
 const Circle = () => null;
 
@@ -49,8 +45,15 @@ const Defs = () => null;
 
 const Stop = () => null;
 
+// TODO: Render some warning text that svgs do not work on this platform, or a placeholder coloured rectangle or something
+const Svg = ({ children, width = 64, height = 64 }: { children: ReactNode, width?: number, height?: number }) => (
+  <View style={StyleSheet.create({ width, height })}>
+    {children}
+  </View>
+);
 
-module.exports = {
+
+export {
   Svg,
   Circle,
   ClipPath,
@@ -65,7 +68,7 @@ module.exports = {
   Polygon,
   Polyline,
   Rect,
-  Symbol: SvgSymbol,
+  SvgSymbol as Symbol,
   Text,
   TextPath,
   TSpan,
@@ -73,3 +76,5 @@ module.exports = {
   Defs,
   Stop,
 };
+
+export default Svg;

@@ -6,4 +6,4 @@ if (typeof window !== 'undefined') {
   svg = require('./common');
 }
 
-module.exports = svg;
+export = svg;
