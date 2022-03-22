@@ -59,7 +59,7 @@ export function RPNativeProvider({ processStyle, children }: NativeProviderProps
 
 export const getInjectedStyles = (styles: CSSProperties) => {
   const [state, dispatch] = useNative();
-  console.log({ state })
+  // console.log({ state }); - if DEBUG
   const { processStyle } = state || {};
 
   return processStyle(styles)
