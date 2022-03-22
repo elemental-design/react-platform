@@ -39,6 +39,8 @@ const _TextInput = React.forwardRef(({
   components = {},
   multiline,
   value,
+  placeholder,
+  placeholderTextColor = 'gray',
   overrides: { style: styleOverride } = { style: {} },
   style,
   containerProps,
@@ -50,6 +52,8 @@ const _TextInput = React.forwardRef(({
   components?: { [key: string]: any },
   overrides?: { style?: CSSProperties },
   value?: string,
+  placeholder?: string,
+  placeholderTextColor?: string,
   multiline?: boolean,
   containerProps?: any,
 }, ref) => {
@@ -58,9 +62,8 @@ const _TextInput = React.forwardRef(({
   const { containerStyle, textStyle } = getSplitStyles(style);
   // console.log({ containerStyle, textStyle });
   const containerStyleProps = getInjectedStyles(containerStyle);
-  const textStyleProps = getInjectedStyles(textStyle);
-
-  console.log({ containerStyleProps, textStyleProps  })
+  const showPlaceholder = Boolean(!value && placeholder);
+  const textStyleProps = getInjectedStyles({  ...textStyle, color: showPlaceholder && placeholderTextColor, });
 
   // React.useEffect(() => {
   //   if (multiline) {
@@ -76,12 +79,13 @@ const _TextInput = React.forwardRef(({
         ref={ref}
         // style={textStyle}
         {...textStyleProps}
+
         // onChange={onChange || (onChangeText
         //     ? ({ target: { value: targetValue }}: { target: { value: string }}) => onChangeText(targetValue)
         //     : undefined)}
         {...props}
       >
-        {value}
+        {value ? value : placeholder}
       </Text>
     </View>
   );
