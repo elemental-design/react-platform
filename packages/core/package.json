@@ -1,6 +1,6 @@
 {
   "name": "@react-platform/core",
-  "version": "0.0.2-beta.6",
+  "version": "0.0.3",
   "description": "Reserved for future use.",
   "main": "lib/index.js",
   "sketch": "lib/index.js",

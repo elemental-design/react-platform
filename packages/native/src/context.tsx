@@ -1,4 +1,4 @@
-import { createContext, CSSProperties, ReactNode, useContext, useMemo, useReducer } from 'react';
+import React, { createContext, CSSProperties, ReactNode, useContext, useMemo, useReducer } from 'react';
 
 const SET_PROCESS_STYLE_FUNC = 'SET_PROCESS_STYLE_FUNC';
 
@@ -47,7 +47,7 @@ export function RPNativeProvider({ processStyle, children }: NativeProviderProps
 
   // NOTE: you *might* need to memoize this value
 
-  const value = useMemo(() => ({ state: { ...state, processStyle }, dispatch }), [state]);
+  const value = useMemo(() => ({ state: { ...state, processStyle }, dispatch }), [state, processStyle]);
 
   return (
     <NativeContext.Provider value={value}>

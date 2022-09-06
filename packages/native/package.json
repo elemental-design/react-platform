@@ -1,6 +1,6 @@
 {
   "name": "@react-platform/native",
-  "version": "0.0.3-beta.4",
+  "version": "0.0.3",
   "description": "Common React Native APIs and components for web and React Native platforms such as `react-native`, `react-native-windows`, `react-native-macos`, `react-sketchapp`, `react-figma`, etc.",
   "main": "lib/index.js",
   "sketch": "lib/index.js",
@@ -13,6 +13,7 @@
     "build:types": "tsc -d -p tsconfig.json",
     "build:js": "npm run build:main # injection doesn’t support ESM && npm run build:module",
     "build": "npm run clean && npm run build:js && npm run build:types",
+    "dev": "tsc --watch -p tsconfig.json & tsc --watch -d -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
