@@ -1,37 +1,155 @@
 {
   "name": "@react-platform/core",
-  "version": "0.0.3",
-  "description": "Reserved for future use.",
-  "main": "lib/index.js",
-  "sketch": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "version": "0.1.0-alpha.0",
+  "description": "Typed cross-platform React primitives with isolated ESM hosts.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "figma": {
+        "types": "./dist/figma/index.d.ts",
+        "default": "./dist/figma/index.js"
+      },
+      "react-native": {
+        "types": "./dist/native/index.d.ts",
+        "default": "./dist/native/index.js"
+      },
+      "default": {
+        "types": "./dist/web/index.d.ts",
+        "default": "./dist/web/index.js"
+      }
+    },
+    "./web": {
+      "types": "./dist/web/index.d.ts",
+      "default": "./dist/web/index.js"
+    },
+    "./native": {
+      "types": "./dist/native/index.d.ts",
+      "default": "./dist/native/index.js"
+    },
+    "./figma": {
+      "types": "./dist/figma/index.d.ts",
+      "default": "./dist/figma/index.js"
+    },
+    "./view": {
+      "figma": {
+        "types": "./dist/figma/view.d.ts",
+        "default": "./dist/figma/view.js"
+      },
+      "react-native": {
+        "types": "./dist/native/view.d.ts",
+        "default": "./dist/native/view.js"
+      },
+      "default": {
+        "types": "./dist/web/view.d.ts",
+        "default": "./dist/web/view.js"
+      }
+    },
+    "./text": {
+      "figma": {
+        "types": "./dist/figma/text.d.ts",
+        "default": "./dist/figma/text.js"
+      },
+      "react-native": {
+        "types": "./dist/native/text.d.ts",
+        "default": "./dist/native/text.js"
+      },
+      "default": {
+        "types": "./dist/web/text.d.ts",
+        "default": "./dist/web/text.js"
+      }
+    },
+    "./image": {
+      "figma": {
+        "types": "./dist/figma/image.d.ts",
+        "default": "./dist/figma/image.js"
+      },
+      "react-native": {
+        "types": "./dist/native/image.d.ts",
+        "default": "./dist/native/image.js"
+      },
+      "default": {
+        "types": "./dist/web/image.d.ts",
+        "default": "./dist/web/image.js"
+      }
+    },
+    "./pressable": {
+      "figma": {
+        "types": "./dist/figma/pressable.d.ts",
+        "default": "./dist/figma/pressable.js"
+      },
+      "react-native": {
+        "types": "./dist/native/pressable.d.ts",
+        "default": "./dist/native/pressable.js"
+      },
+      "default": {
+        "types": "./dist/web/pressable.d.ts",
+        "default": "./dist/web/pressable.js"
+      }
+    },
+    "./platform": {
+      "figma": {
+        "types": "./dist/figma/platform.d.ts",
+        "default": "./dist/figma/platform.js"
+      },
+      "react-native": {
+        "types": "./dist/native/platform.d.ts",
+        "default": "./dist/native/platform.js"
+      },
+      "default": {
+        "types": "./dist/web/platform.d.ts",
+        "default": "./dist/web/platform.js"
+      }
+    },
+    "./stylesheet": {
+      "types": "./dist/stylesheet.d.ts",
+      "default": "./dist/stylesheet.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts.d.ts",
+      "default": "./dist/contracts.js"
+    },
+    "./adapter": {
+      "types": "./dist/adapter.d.ts",
+      "default": "./dist/adapter.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
-    "clean": "rm -rf lib/",
-    "build:main": "tsc -p tsconfig.json",
-    "build:module": "tsc -p tsconfig.module.json",
-    "build:js": "npm run build:main # injection doesn’t support ESM && npm run build:module",
-    "build:types": "tsc -d -p tsconfig.json",
-    "build": "npm run clean && npm run build:js && npm run build:types",
-    "dev": "tsc --watch -p tsconfig.json & tsc --watch -d -p tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.types.json",
+    "test": "vitest run",
+    "example:manifest": "node scripts/manifest.mjs",
+    "example:figma": "pnpm build && node scripts/figma-example.mjs"
   },
-  "keywords": [],
-  "author": "Macintosh Helper <github@macintoshhelper.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elemental-design/react-platform.git"
-  },
-  "bugs": {
-    "url": "https://github.com/elemental-design/react-platform/issues"
-  },
-  "homepage": "https://github.com/elemental-design/react-platform#readme",
   "peerDependencies": {
-    "react-primitives": ">= 0.8.1"
+    "react": "^19.0.0",
+    "react-native": ">=0.82.0",
+    "react-designapp": ">=3.2.6"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    },
+    "react-designapp": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "@types/react": "^17.0.39",
-    "typescript": "^4.6.2"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "typescript": "5.9.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-test-renderer": "19.2.0",
+    "react-designapp": "file:../../../react-designapp/packages/react-designapp",
+    "vitest": "3.2.4",
+    "jsdom": "26.1.0",
+    "esbuild": "0.25.11"
   }
 }

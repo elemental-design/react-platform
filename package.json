@@ -5,7 +5,10 @@
   "description": "Cross-platform React interoperability APIs, component wrappers and polyfills for all React (Native) platforms.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm -r --sort build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "check": "pnpm typecheck && pnpm build && pnpm test"
   },
   "repository": {
     "type": "git",
@@ -18,16 +21,13 @@
     "url": "https://github.com/elemental-design/react-platform/issues"
   },
   "homepage": "https://github.com/elemental-design/react-platform#readme",
-  "dependencies": {
-    "typescript": "^3.9.5"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
-    "@types/node": "^16.11.26"
-  },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/core",
+    "packages/mdx"
+  ],
+  "type": "module",
+  "packageManager": "pnpm@12.8.1",
+  "engines": {
+    "node": ">=22"
+  }
 }

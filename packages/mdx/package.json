@@ -1,0 +1,36 @@
+{
+  "name": "@react-platform/mdx",
+  "version": "0.1.0-alpha.0",
+  "description": "Renderer-independent MDX compilation, YAML metadata and bundler integration.",
+  "type": "module",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": ["dist", "README.md"],
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./esbuild": { "types": "./dist/esbuild.d.ts", "import": "./dist/esbuild.js" }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^3.1.0",
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.8.0",
+    "source-map": "^0.7.6",
+    "@types/hast": "^3.0.0",
+    "@types/mdast": "^4.0.0",
+    "unified": "^11.0.0"
+  },
+  "peerDependencies": { "esbuild": "^0.25.0" },
+  "peerDependenciesMeta": { "esbuild": { "optional": true } },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "^22.0.0",
+    "esbuild": "0.25.11",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  }
+}

@@ -1,0 +1,7 @@
+packages:
+  - packages/core
+  - packages/mdx
+autoInstallPeers: false
+allowBuilds:
+  esbuild: true
+  node-sketch-bridge: false
