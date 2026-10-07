@@ -108,3 +108,8 @@ dist
 .DS_Store
 
 packages/*/lib
+
+packages/core/.recipe-*/
+packages/core/examples/**/*.figma.json
+
+packages/mdx/tests/.fixture-*/

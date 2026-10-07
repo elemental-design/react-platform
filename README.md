@@ -2,6 +2,12 @@
 
 Cross-platform React interoperability APIs, component wrappers and polyfills for all React (Native) platforms.
 
+## Modern core implementation
+
+See [the architecture proposal](./docs/architecture.md) for an independent ESM primitive core, upstream Strict DOM with a Figma polyfill in `react-designapp`, static Figma exports through `react-designapp`, Loom integration, and an optional Astryx integration. The first core slice is implemented; the older packages below remain legacy experiments.
+
+Run `pnpm install` then `pnpm check`. See [Core usage and implementation limits](./packages/core/README.md), [the Astryx-inspired recipe and agent manifest](./packages/core/examples/astryx-inspired/README.md), and [repository guidance](./AGENTS.md). Core and the shared MDX compiler are in the active workspace; service integrations such as expo-notifications are deferred.
+
 This exists primarily as an **experimental** and **unofficial** community-led project to explore and help push forward standards and progress for **React as a platform**.
 
 The project is inspired by and builds on top of Leland’s [`react-primitives`](https://github.com/lelandrichardson/react-primitives) project and Nicolas’s [`react-native-web`](https://github.com/necolas/react-native-web). While not integrated with, this may pull ideas/research from [`reactxp`](https://github.com/microsoft/reactxp).
@@ -102,3 +108,6 @@ Open to contributions :)
 
 [MIT](./LICENSE.md)
 
+## Shared MDX compiler
+
+[`@react-platform/mdx`](./packages/mdx/README.md) compiles general MDX documents with YAML metadata and source maps. It exposes an optional esbuild plugin and has no renderer dependency. `mdx-slides` owns the presentation layer; React Designapp contains a document-to-Figma example using its existing Strict DOM host. The compiler is independent of primitive core.
